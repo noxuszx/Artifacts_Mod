@@ -15,6 +15,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.noxus.tutorialmod.block.ModBlocks;
 import net.noxus.tutorialmod.item.ModCreativeModeTabs;
 import net.noxus.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -35,7 +36,7 @@ public class TutorialMod
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
-
+        ModBlocks.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -62,6 +63,11 @@ public class TutorialMod
             event.accept(ModItems.PACKING);
             event.accept(ModItems.NASH);
             event.accept(ModItems.COKEBEER);
+            event.accept(ModItems.NOX_RING);
+            event.accept(ModItems.NICO_RING);
+            event.accept(ModItems.JAY_RING);
+            event.accept(ModItems.EON_CROSS);
+            event.accept(ModItems.CHRIS_RING);
         }
     }
 
